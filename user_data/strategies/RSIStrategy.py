@@ -15,6 +15,7 @@ class RSIStrategy(IStrategy):
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe["rsi"] = talib.RSI(dataframe["close"], timeperiod=14)
         dataframe["volume_mean"] = dataframe["volume"].rolling(20).mean()
+        dataframe["volume_mean"] = dataframe["volume"].rolling(20).mean()
         return dataframe
 
     def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
