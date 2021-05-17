@@ -13,8 +13,7 @@ class RSIStrategy(IStrategy):
     startup_candle_count: int = 20
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe["rsi"] = talib.RSI(dataframe["close"], timeperiod=14)
-        dataframe["volume_mean"] = dataframe["volume"].rolling(20).mean()
+        dataframe["rsi"] = talib.RSI(dataframe["close"].astype(float), timeperiod=14)
         dataframe["volume_mean"] = dataframe["volume"].rolling(20).mean()
         return dataframe
 
