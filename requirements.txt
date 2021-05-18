@@ -6,3 +6,5 @@ ccxt==1.43.0
 ta-lib==0.4.19
 scikit-learn==0.24.0
 python-telegram-bot==13.0
+
+# pinned for stability
