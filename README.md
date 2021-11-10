@@ -1,14 +1,26 @@
 # freqtrade-kucoin-bot
 
-KuCoin trading bot using [freqtrade](https://github.com/freqtrade/freqtrade).
+KuCoin crypto trading bot using [freqtrade](https://github.com/freqtrade/freqtrade).
 
-## Status
+## Strategies
 
-Work in progress.
+- RSIStrategy - RSI mean reversion (1h)
+- EMAStrategy - EMA 9/21 crossover (4h)
+- BollingerBandsStrategy - BB squeeze breakout (1h)
+- MACDStrategy - MACD signal crossover (4h)
 
 ## Setup
 
 ```bash
-git clone <repo>
-pip install -r requirements.txt
+cp .env.example .env
+# Fill in your KuCoin API credentials
+make docker-build
+make docker-up
+```
+
+## Docker
+
+```bash
+docker compose up -d
+docker compose logs -f
 ```
