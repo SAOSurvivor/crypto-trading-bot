@@ -1,0 +1,28 @@
+name: Backtest
+
+on:
+  workflow_dispatch:
+    inputs:
+      strategy:
+        description: Strategy to backtest
+        default: RSIStrategy
+      timerange:
+        description: Time range (YYYYMMDD-YYYYMMDD)
+        default: 20230101-20231231
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run backtest in Docker
+        run: |
+          docker compose run --rm freqtrade backtesting \
+            --config user_data/config.json \
+            --strategy ${{ github.event.inputs.strategy }} \
+            --timerange ${{ github.event.inputs.timerange }}
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: backtest-results
+          path: user_data/backtest_results/
