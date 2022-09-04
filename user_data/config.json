@@ -4,13 +4,13 @@
   "stake_amount": 100,
   "dry_run": true,
   "minimal_roi": {"0": 0.08, "30": 0.04},
-  "stoploss": -0.10,
+  "stoploss": -0.10  ,
   "timeframe": "1h",
   "exchange": {
     "name": "kucoin",
-    "key": "${KUCOIN_API_KEY}",
-    "secret": "${KUCOIN_API_SECRET}",
-    "password": "${KUCOIN_API_PASSPHRASE}",
+    "key": "",
+    "secret": "",
+    "password": "",
     "pair_whitelist": ["BTC/USDT", "ETH/USDT", "BNB/USDT"]
   },
   "pairlists": [{"method": "StaticPairList"}],
