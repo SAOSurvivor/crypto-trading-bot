@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [1.2.0] - 2022-10-15
 
 ### Added
 - RSIStrategy: RSI mean reversion (1h)
