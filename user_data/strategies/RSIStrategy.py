@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 
 class RSIStrategy(IStrategy):
-    INTERFACE_VERSION = 3  # noqa: E501
+    INTERFACE_VERSION = 3
     timeframe = "1h"
     can_short = False
     startup_candle_count: int = 50
