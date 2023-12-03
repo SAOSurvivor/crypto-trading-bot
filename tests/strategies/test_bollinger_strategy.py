@@ -33,6 +33,7 @@ class TestBollingerBandsStrategy:
         valid = df.dropna(subset=["bb_upper", "bb_lower"])
         assert (valid["bb_upper"] >= valid["bb_lower"]).all()
 
+    # Regression test added 2023-12-02
     def test_entry_uses_shifted_close(self, sample_ohlcv, meta):
         """Regression: entry should use shift(1) to avoid repainting."""
         from user_data.strategies.BollingerBandsStrategy import BollingerBandsStrategy
