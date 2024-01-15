@@ -1,8 +1,8 @@
-# Requirements - 2023 (migrated from ta-lib to pandas-ta)
-freqtrade==2023.6
-pandas==2.0.0
-numpy==1.24.0
-ccxt==3.1.0
+# Requirements - 2024
+freqtrade==2024.4
+pandas==2.1.0
+numpy==1.26.0
+ccxt==4.2.0
 pandas-ta==0.3.14b
-scikit-learn==1.2.0
-python-telegram-bot==20.3
+scikit-learn==1.4.0
+python-telegram-bot==21.0
