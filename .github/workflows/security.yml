@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install bandit
-        run: pip install bandit==1.7.8 pip-audit==2.7.2
+        run: pip install bandit==1.7.8
       - name: Run bandit
         run: bandit -r user_data/strategies/ strategy_selector.py -c pyproject.toml
 
