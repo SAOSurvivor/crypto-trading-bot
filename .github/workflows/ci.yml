@@ -46,4 +46,4 @@ jobs:
         uses: codecov/codecov-action@v4
         with:
           file: ./coverage.xml
-        continue-on-error: true
+        continue-on-error: false
