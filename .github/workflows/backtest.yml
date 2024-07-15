@@ -1,7 +1,7 @@
 name: Backtest
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # manual trigger
     inputs:
       strategy:
         description: Strategy to backtest
