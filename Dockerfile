@@ -1,4 +1,4 @@
-FROM freqtradeorg/freqtrade:stable
+FROM freqtradeorg/freqtrade:stable_3.12
 
 USER root
 COPY requirements.txt /tmp/requirements.txt
