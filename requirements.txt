@@ -1,8 +1,8 @@
-# Requirements - 2024
-freqtrade==2024.4
-pandas==2.1.0
-numpy==1.26.0
-ccxt==4.2.0
+# Requirements - 2025/2026
+freqtrade==2025.1
+pandas==2.2.0
+numpy==2.0.0
+ccxt==4.4.0
 pandas-ta==0.3.14b
-scikit-learn==1.4.0
-python-telegram-bot==21.0
+scikit-learn==1.5.0
+python-telegram-bot==21.4
