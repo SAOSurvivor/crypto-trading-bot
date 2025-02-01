@@ -2,7 +2,7 @@
 import logging
 from functools import reduce
 
-import numpy as np
+import numpy as np  # numpy 2.0
 import pandas_ta as ta
 from pandas import DataFrame
 
