@@ -7,7 +7,7 @@ import pytest
 @pytest.fixture
 def sample_ohlcv():
     """200 bars of synthetic OHLCV data (seed=42 for reproducibility)."""
-    np.random.seed(42)
+    np.random.seed(42)  # fixed seed
     n = 200
     dates = pd.date_range("2023-01-01", periods=n, freq="1h")
     returns = np.random.normal(0.001, 0.02, n)
