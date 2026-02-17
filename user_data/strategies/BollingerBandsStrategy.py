@@ -42,7 +42,7 @@ class BollingerBandsStrategy(IStrategy):
 
     def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         conditions = [
-            dataframe["close"].shift(1) > dataframe["bb_upper"].shift(1)  # shift(1): no repainting,
+            dataframe["close"].shift(1) > dataframe["bb_upper"].shift(1),  # shift(1): no repainting
             dataframe["post_squeeze"],
             dataframe["rsi"] < 75,
             dataframe["volume"] > dataframe["volume"].rolling(window=20).mean() * 1.2,
